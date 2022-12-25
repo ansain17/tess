@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".formulir">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/back" />
+
+
+    <TextView
+        android:id="@+id/nm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/psb"
+        android:gravity="center"
+        android:text="Formulir Pendaftaran"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:id="@+id/nama"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/nm"
+        android:paddingLeft="8dp"
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:text="Nama Lengkap"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:textColorHint="#66000000"
+                android:hint="nama sesuai KTP"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/notlp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nama"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="No/Tlp"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:textColor="#66000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notlp"
+        android:layout_marginLeft="10dp"
+        android:hint="Masukan No"
+        android:textColorHint="#66000000"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tgl"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notlp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="70dp"
+        android:text="Tanggal Lahir*"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/tanggal"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/tgl"
+        android:layout_marginLeft="10dp"
+        android:hint="DD/MM/YYYY"
+        android:textColor="@color/black"
+        android:textColorHint="#66000000"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/jeniskemalin"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tgl"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="70dp"
+        android:text="Jenis Kelamin"
+        android:textColor="@color/black" />
+
+    <RadioGroup
+        android:id="@+id/rdgrop"
+        android:layout_below="@+id/jeniskemalin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/pria"
+            android:text="pria"
+            android:textColor="#66000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/wanita"
+            android:textColor="#66000000"
+            android:text="wanita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </RadioGroup>
+    <TextView
+        android:id="@+id/pekerjaan"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rdgrop"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Pekerjaan"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/kerja"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/pekerjaan"
+        android:layout_marginLeft="10dp"
+        android:hint="pekerjaan"
+        android:textColorHint="#66000000"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/keluhan"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kerja"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Keluhan"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:textColor="@color/black"
+        android:id="@+id/keluh"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/keluhan"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/kotak"
+        android:gravity="left"
+        android:hint="Masukan Keluhan Anda Di Kolom ini*"
+        android:padding="10dp"
+        android:textColorHint="#66000000"
+        android:textSize="10dp" />
+
+    <Button
+        android:layout_marginLeft="1dp"
+        android:layout_below="@+id/keluh"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#921C8C"
+        android:background="@drawable/cornerlogin"
+        android:fontFamily="@font/psb"
+        android:textSize="10dp"
+        android:id="@+id/btndaftar"
+        android:text="Daftar"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+
+
+
+
+
+
+</RelativeLayout>
